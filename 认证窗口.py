@@ -19,3 +19,9 @@ try:
     print(html)
 except URLError as err:
     print(err.reason)
+
+# 这里首先实例化了一个HTTPBasicAuthHandler对象auth_handler 其参数是HTTPPasswordMgrWithDefaultRealm
+# 对象,它利用add_password方法添加用户名和密码，这样就建立了一个用来处理验证的Handler类
+#  然后将刚建立的auth_handler类当作参数传入build_opener方法，构建一个Opener，
+# 这个Opener在发送请求时就相当于已经验证成功了
+# 最后利用Opener类中的open方法打开链接，即可完成验证。
