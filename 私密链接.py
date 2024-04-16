@@ -18,4 +18,4 @@ print(response.status_code)
 response = requests.get('http://ssr2.scrape.center/',cert=('/path/server.txt','/path/server.key'))
 print(response.status_code)
 # 上面的代码需要crt 和 key文件 并且指定它们的路径
-# 另外注意本地私有证书key必须是解密状态 加密状态的key是不支持的1
+# 另外注意本地私有证书key必须是解密状态 加密状态的key是不支持的
